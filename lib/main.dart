@@ -6,6 +6,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'constants/list.dart';
+import 'designs/compare_ui.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       return const MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Tile Design',
-        home: HomePage(),
+        home: CompareProducts(),
       );
   }
 }
@@ -41,13 +42,17 @@ class _HomePageState extends State<HomePage> {
         child:
         Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10.0,vertical: 2.0),
-            child: ListView.builder(
-                itemCount: ListTiles.tiles.length,
-                itemBuilder: (BuildContext contex,int index){
-              return Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 10),
-                  child: ListTiles.tiles[index]);
-            })
+            child: Container(
+              width: width * 0.5,
+            )
+
+            // ListView.builder(
+            //     itemCount: ListTiles.tiles.length,
+            //     itemBuilder: (BuildContext contex,int index){
+            //   return Padding(
+            //       padding: const EdgeInsets.symmetric(vertical: 10),
+            //       child: ListTiles.tiles[index]);
+            // })
           ),
 
       ),
